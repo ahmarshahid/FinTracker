@@ -5,7 +5,7 @@ import RightSidebar from '@/components/RightSidebar';
 
 const Home = () => {
     const LoggedIn = {firstName: 'Ahmar', lastName: 'Shahid',
-        email:'ahmarinfo@yahoo.com'
+        email:'ahmar10@info.com'
     };
   return (
     <section className='home'>
