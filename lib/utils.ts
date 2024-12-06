@@ -66,14 +66,14 @@ export const formatDateTime = (dateString: Date) => {
 };
 
 export function formatAmount(amount: number): string {
-  const formatter = new Intl.NumberFormat("en-US", {
+  const formatter = new Intl.NumberFormat("de-DE", { // Use a European locale like "de-DE" (German)
     style: "currency",
-    currency: "USD",
+    currency: "EUR", // Change the currency to EUR
     minimumFractionDigits: 2,
   });
-
-  return formatter.format(amount);
+  return formatter.format(amount); // Format the amount
 }
+
 
 export const parseStringify = (value: any) => JSON.parse(JSON.stringify(value));
 
