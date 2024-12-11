@@ -17,7 +17,7 @@ interface CustomInput {
 
 
 const CustomInput = ({control, name, Label, placeholder, type}: CustomInput) => {
-  return (
+return (
     <FormField
             control={control}
             name= {name}
@@ -31,7 +31,7 @@ const CustomInput = ({control, name, Label, placeholder, type}: CustomInput) => 
                         <Input
                          placeholder= {placeholder}
                          className = "input-class"
-                         type= {type}
+                       type= {type}
                          {...field}
                         />
                       </FormControl>
