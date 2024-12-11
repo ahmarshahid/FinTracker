@@ -17,7 +17,7 @@ import CustomInput from "./CustomInput";
 const AuthForm = ({ type }: { type: string }) => {
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-
+  
   const formSchema = authformSchema(type);
 
 
@@ -62,6 +62,9 @@ const AuthForm = ({ type }: { type: string }) => {
             {type === 'sign-up' && (
               <>
 
+              <div className = "flex gap-4">
+
+
               <CustomInput control={form.control} name="firstName" 
               Label="First Name" placeholder="Enter your first name" 
               type="text" />
@@ -70,11 +73,15 @@ const AuthForm = ({ type }: { type: string }) => {
               Label="Last Name" placeholder="Enter your last name" 
               type="text" />
 
+              </div>
+
+
               <CustomInput control={form.control} name="address1" 
               Label="Address" placeholder="Enter your address" 
               type="text" />
 
-
+              
+              <div className = "flex gap-4">
               <CustomInput control={form.control} name="state" 
               Label="State" placeholder="Example LHR" 
               type="text" />
@@ -83,6 +90,9 @@ const AuthForm = ({ type }: { type: string }) => {
               Label="Postal Code" placeholder="111001" 
               type="text" />
 
+              </div>
+
+                <div className = "flex gap-4">
               <CustomInput control={form.control} name="dateOfBirth" 
               Label="Date of Birth" placeholder="YYYY-MM-DD" 
               type="text" />
@@ -90,6 +100,7 @@ const AuthForm = ({ type }: { type: string }) => {
               <CustomInput control={form.control} name="ssn" 
               Label="SSN" placeholder="Example 123-45-6789" 
               type="text" />
+              </div>
 
               </>
             )}
