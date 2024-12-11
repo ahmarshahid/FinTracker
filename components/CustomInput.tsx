@@ -4,10 +4,17 @@ import {Input} from './ui/input'
 import { z } from 'zod'
 import {Control} from 'react-hook-form'
 import {authformSchema} from '@/lib/utils'
+import { FieldPath } from 'react-hook-form'
+
+
+const formSchema = authformSchema('sign-up')
+
+
+
 
 interface CustomInput {
-    control: Control<z.infer<typeof authformSchema>>,
-    name: string,
+    control: Control<z.infer<typeof formSchema>>,
+    name: FieldPath<z.infer<typeof formSchema>>,
     Label: string,
     placeholder: string,
     type: string
@@ -20,7 +27,7 @@ const CustomInput = ({control, name, Label, placeholder, type}: CustomInput) => 
 return (
     <FormField
             control={control}
-            name= {name}
+            name = {name}
             render={({ field }) => (
                 <div className='form-item'>
                    <FormLabel className='form-label'>
