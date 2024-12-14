@@ -11,15 +11,19 @@ import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import CustomInput from "./CustomInput";
-
+import { useRouter } from "next/navigation"
+import {signIn, signUp } from "@/lib/actions/user.actions";
 
 
 const AuthForm = ({ type }: { type: string }) => {
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   
-  const formSchema = authformSchema(type);
+  
 
+  const formSchema = authformSchema(type);
+  
+  const router = useRouter();
 
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -30,11 +34,40 @@ const AuthForm = ({ type }: { type: string }) => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  const onSubmit = async(data: z.infer<typeof 
+    formSchema>) => {
     setIsLoading(true);
-    console.log(values);
-    setIsLoading(false);
+    
+    try {
+      // Creating an account for Appwrite and Plaid Link Token
+
+
+      if(type === 'sign-up'){
+        const newUser = await signUp(data);
+        
+
+        setUser(newUser);
+      }
+
+      if(type === 'sign-in'){
+
+        // const response = await signIn({
+        //  email : data.email,
+        //  password: data.password,
+       // })
+
+        if(response){router.push('/')}
+        
+      }
+    }
+  catch(error){
+    console.log(error);
   }
+    finally{
+      setIsLoading(false);
+  }
+  }
+
 
   return (
     <section className="auth-form">
@@ -78,6 +111,10 @@ const AuthForm = ({ type }: { type: string }) => {
 
               <CustomInput control={form.control} name="address1" 
               Label="Address" placeholder="Enter your address" 
+              type="text" />
+
+              <CustomInput control={form.control} name="city" 
+              Label="City" placeholder="Enter your city" 
               type="text" />
 
               
