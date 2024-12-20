@@ -13,7 +13,7 @@ import { Form } from "@/components/ui/form";
 import CustomInput from "./CustomInput";
 import { useRouter } from "next/navigation"
 import {signIn, signUp } from "@/lib/actions/user.actions";
-
+import PlaidLink from "./PlaidLink";
 
 const AuthForm = ({ type }: { type: string }) => {
   const [user, setUser] = useState(null);
@@ -70,7 +70,7 @@ const AuthForm = ({ type }: { type: string }) => {
 
 
   return (
-    <section className="auth-form">
+    <section className="auth-form container mx-auto flex flex-col gap-8 md:gap-12 py-8 md:py-12">
       <header className="flex flex-col gap-5 md:gap-8">
         <Link href="/" className="cursor-pointer flex items-center gap-1">
           <Image src="/icons/bitcoin1.png" width={34} height={34} alt="Horizon logo" />
@@ -85,9 +85,13 @@ const AuthForm = ({ type }: { type: string }) => {
           </p>
         </div>
       </header>
-      {user ? (
-        <div className="flex flex-col gap-4">{/* PlaidLink */}</div>
-      ) : (
+     {/* {user ? ( */}
+        <div className="flex flex-col gap-4">
+          
+          <PlaidLink user = {user} variant= "primary"/>
+          
+          </div>
+   { /*  ) : ( */}
         <>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -183,7 +187,7 @@ const AuthForm = ({ type }: { type: string }) => {
 
 
         </>
-      )}
+    {/*  )}  */}
     </section>
   );
 };

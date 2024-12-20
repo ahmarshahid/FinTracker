@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "FINTECH",
   description: "Fintech is a modern banking platform makes your financial life easier.",
   icons: {
-     icon : '/icons/logo.svg'
+     icon : '/icons/bitcoin1.png',
     }
   
 };
