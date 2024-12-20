@@ -65,6 +65,10 @@ export async function getLoggedInUser() {
   try {
 
     const { account } = await createSessionClient();
+     
+    if(!account){
+      throw new Error("No Session")
+    }
 
     const user = await account.get();
 
