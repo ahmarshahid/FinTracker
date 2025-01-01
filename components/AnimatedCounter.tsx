@@ -9,7 +9,7 @@ const AnimatedCounter = ({
     <div className='w-full'>
       <CountUp
       //duration={4}
-      decimals={2}
+      decimals={3}
       decimal = '.'
       prefix = '€'
       

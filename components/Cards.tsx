@@ -43,8 +43,8 @@ const Cards = ({
         />
         <Image
         src = '/icons/mastercard.svg'
-        width = {50}
-        height = {40}
+        width = {49}
+        height = {39}
         alt= 'mastercard'
         className = 'ml-5'
         />

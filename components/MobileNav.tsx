@@ -34,8 +34,8 @@ const MobileNav = ({ user }: MobileNavProps) => {
           <Link href="/" className="cursor-pointer flex items-center gap-1 px-4">
             <Image 
               src="/icons/bitcoin1.png"
-              width={34}
-              height={34}
+              width={35}
+              height={35}
               alt="Horizon logo"
             />
             <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">Fintech</h1>
