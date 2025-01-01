@@ -12,7 +12,7 @@ const DoughnutChart = ({
             {
                 label: 'Banks',
                 data: [1250,2600,3200,5600,7530],
-                backgroundColor: ['#0747b6', '#2265d8','#2f91fa']
+                backgroundColor: ['#0747b6', '#2265d8', '#2f91fa']
             }
         ],
         labels: ['Bank of America', 'Chase', 'Wells Fargo', 'Citi Bank']
