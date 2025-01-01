@@ -203,7 +203,7 @@ const AuthForm = ({ type }: { type: string }) => {
 
         </>
       )}  
-    </section>
+   </section>
   );
 };
 
