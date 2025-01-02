@@ -65,7 +65,7 @@
   }
 
   .text-10 {
-    @apply text-[10px] leading-[14px];
+    @apply text-[11px] leading-[14px];
   }
 
   .text-12 {
