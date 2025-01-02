@@ -88,7 +88,7 @@ const AuthForm = ({ type }: { type: string }) => {
     <section className="auth-form container mx-auto flex flex-col gap-8 md:gap-12 py-8 md:py-12">
       <header className="flex flex-col gap-5 md:gap-8">
         <Link href="/" className="cursor-pointer flex items-center gap-1">
-          <Image src="/icons/bitcoin1.png" width={34} height={34} alt="Horizon logo" />
+          <Image src="/icons/bitcoin1.png" width={36} height={36} alt="Horizon logo" />
           <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">Fintech</h1>
         </Link>
         <div className="flex flex-col gap-1 md:gap-3">
@@ -172,7 +172,7 @@ const AuthForm = ({ type }: { type: string }) => {
                 {isLoading ? 
                  ( 
                  <>
-                 <Loader2 size={20} className="animate-spin" /> &nbsp; Loading...
+                 <Loader2 size={21} className="animate-spin" /> &nbsp; Loading...
                  </>
                 ) : type === "sign-in" ? 'Sign In' : 'Sign Up'}
               </Button>
@@ -195,12 +195,6 @@ const AuthForm = ({ type }: { type: string }) => {
 
 
             </footer>
-
-
-
-
-
-
         </>
       )}  
    </section>

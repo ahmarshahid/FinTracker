@@ -123,8 +123,8 @@ export const transactionCategoryStyles = {
     chipBackgroundColor: "bg-[#F2F4F7]",
   },
   Success: {
-    borderColor: "border-[#12B76A]",
-    backgroundColor: "bg-[#12B76A]",
+    borderColor: "border-[#12b76a]",
+    backgroundColor: "bg-[#12b76a]",
     textColor: "text-[#027A48]",
     chipBackgroundColor: "bg-[#ECFDF3]",
   },
